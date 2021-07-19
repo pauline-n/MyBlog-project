@@ -1,0 +1,10 @@
+_pycache_
+
+# packages
+lib/
+
+# django
+db.sqlite3
+
+# environmet
+primenv
