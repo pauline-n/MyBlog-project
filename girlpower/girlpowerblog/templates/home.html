@@ -1,1 +1,15 @@
-<h1>Hello world</h1>
+{% extends 'base.html' %} {% block content %}
+
+<h1>Girl Power Blog Posts</h1>
+
+<ol>
+  {% for blog in object_list %}
+  <li>
+    <a href="{% url 'blogdetails' blog.pk %}">{{ blog.title }}</a> <br />
+    - {{ blog.author.first_name }}<br />
+    {{ blog.body }}
+  </li>
+
+  {% endfor %}
+</ol>
+{% endblock %}
