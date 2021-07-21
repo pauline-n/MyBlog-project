@@ -2,14 +2,16 @@
 
 <h1>Girl Power Blog Posts</h1>
 
-<ol>
+<ul>
   {% for blog in object_list %}
   <li>
     <a href="{% url 'blogdetails' blog.pk %}">{{ blog.title }}</a> <br />
     - {{ blog.author.first_name }}<br />
-    {{ blog.body }}
+    {{ blog.body }} <br />
+    <a href="{% url 'updatepost' blog.pk %}">Edit</a> -
+    <a href="{% url 'deletepost' blog.pk %}">Delete</a>
   </li>
 
   {% endfor %}
-</ol>
+</ul>
 {% endblock %}

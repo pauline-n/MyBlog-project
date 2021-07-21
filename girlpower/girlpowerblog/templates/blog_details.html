@@ -6,6 +6,10 @@
 <hr />
 <br />
 {{ blog.body }}
+<br />
+<a href="{% url 'updatepost' blog.pk %}">Edit</a>
+<br />
+<a href="{% url 'deletepost' blog.pk %}">Delete</a>
 
 <br />
 <br />
